@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">eSarakan Lessor</string>
+    <string name="reg">Account Registration</string>
+    <string name="listing_type">Listing Type</string>
+    <string-array name="gen">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="listing_type">
+        <item>Room</item>
+        <item>Bed Spacer</item>
+    </string-array>
+    <string name="gen">Choose Gender</string>
+    <string-array name="municipality">
+        <item>Bacarra</item>
+        <item>Badoc</item>
+        <item>Bangui</item>
+        <item>Banna</item>
+        <item>Batac City</item>
+        <item>Burgos</item>
+        <item>Carasi</item>
+        <item>Curimao</item>
+        <item>Dingras</item>
+        <item>Laoag City</item>
+        <item>Marcos</item>
+        <item>Nueva Era</item>
+        <item>Pagudpud</item>
+        <item>Paoay</item>
+        <item>Pasuquin</item>
+        <item>Piddig</item>
+        <item>Pinili</item>
+        <item>San Nicolas</item>
+        <item>Sarrat</item>
+        <item>Solsona</item>
+        <item>Vintar</item>
+
+    </string-array>
+    <string name="map_key">AIzaSyDt8y803KFpzDNlofF95kNw-5VZfx64eP0</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoibGhlc3RlcjA4IiwiYSI6ImNsOHU4Mmo5eTAxODYzcG8xM2Y3bDlnMTUifQ.aPCLMGg_98nOBew93mEUvg</string>
+    <string name="my_listings">My Listings</string>
+</resources>

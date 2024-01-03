@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8DEFF"
+    tools:context=".SettingsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:background="@color/colorPrimaryDark">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/close_button"
+                            android:layout_width="30dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/back"
+                            app:tint="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/save_button"
+                            android:layout_width="40dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ok"
+                            app:tint="@color/white" />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/content_bd">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/app_bar_settings"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/person"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:id="@+id/change_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Change Password"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/change_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Change Email"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:background="@drawable/edittext_border"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawableStart="@drawable/person"
+                    android:drawableTint="@color/black"
+                    android:id="@+id/lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/change_picture_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:hint="Last Name" />
+                <EditText
+                    android:background="@drawable/edittext_border"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawableStart="@drawable/person"
+                    android:drawableTint="@color/black"
+                    android:id="@+id/fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/change_picture_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:hint="First Name" />
+                <EditText
+                    android:background="@drawable/edittext_border"
+                    android:paddingTop="8dp"
+                    android:visibility="gone"
+                    android:paddingBottom="8dp"
+                    android:drawableStart="@drawable/person"
+                    android:drawableTint="@color/black"
+                    android:id="@+id/mname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/change_picture_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:hint="Middle Name" />
+
+                <EditText
+                    android:background="@drawable/edittext_border"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawableStart="@drawable/phone"
+                    android:drawableTint="@color/black"
+                    android:id="@+id/phone_number"
+                    android:paddingStart="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/full_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:inputType="number"
+                    android:hint="Phone Number" />
+
+                <EditText
+                    android:background="@drawable/edittext_border"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:drawableTint="@color/black"
+                    android:drawableStart="@drawable/pin"
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phone_number"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="5dp"
+                    android:hint="Address"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

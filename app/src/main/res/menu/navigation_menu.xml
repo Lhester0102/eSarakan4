@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+    <item
+        android:id="@+id/listing"
+        android:icon="@drawable/listing"
+        android:title="Listing" />
+    <item
+        android:id="@+id/msgs"
+        android:icon="@drawable/messages"
+        android:title="Messages" />
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/person"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/back"
+        android:title="Logout" />
+</menu>

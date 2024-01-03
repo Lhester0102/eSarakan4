@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8695E8"
+    tools:context=".Apartments">
+
+<ScrollView
+    android:layout_marginTop="60dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/content_bd"
+        android:orientation="vertical"
+        app:flow_horizontalAlign="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Listing"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:background="@drawable/edittext_border"
+                android:id="@+id/buidling_image"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/add_image" />
+            <ImageView
+                android:layout_margin="2dp"
+                android:background="@drawable/edittext_border"
+                android:layout_weight="1"
+                android:id="@+id/permit"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/permit" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/building"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_border"
+            android:drawableStart="@drawable/home"
+            android:drawableTint="@color/black"
+            android:ems="10"
+            android:hint="Property Name"
+            android:inputType="textPersonName"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray" />
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/room_no"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_border"
+            android:drawableStart="@drawable/person"
+            android:drawableTint="@color/black"
+            android:ems="10"
+            android:hint="Room Number"
+            android:inputType="textPersonName"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_border"
+            android:drawableStart="@drawable/pin"
+            android:drawableTint="@color/black"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textPersonName"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray" />
+
+        <Spinner
+            android:id="@+id/ltype"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/spinner_bg"
+            android:entries="@array/listing_type"
+            android:prompt="@string/listing_type" />
+        <Spinner
+            android:id="@+id/fortype"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/spinner_bg"
+            android:entries="@array/gen"
+            android:drawableStart="@drawable/person"
+             />
+        <EditText
+            android:id="@+id/available"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_border"
+            android:drawableStart="@drawable/available"
+            android:drawableTint="@color/black"
+            android:hint="Room Available"
+            android:inputType="number"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray" />
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_border"
+            android:drawableStart="@drawable/peso"
+            android:drawableTint="@color/black"
+            android:ems="10"
+            android:hint="Price / Month"
+            android:inputType="numberDecimal"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray" />
+
+        <EditText
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_border"
+            android:drawableTint="@color/black"
+            android:gravity="top|start"
+            android:hint="Apartment Info"
+            android:inputType="textImeMultiLine"
+            android:lines="3"
+            android:minLines="3"
+            android:paddingStart="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray" />
+
+        <Button
+            android:id="@+id/add_listing"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button"
+            android:text="Add Listing" />
+
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_btn_red"
+            android:text="@android:string/cancel" />
+    </LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
